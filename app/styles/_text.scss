@@ -1,0 +1,13 @@
+@mixin text-heading {
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+@mixin text-body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 15px;
+}
+
+a {
+  color: $colour-text;
+}

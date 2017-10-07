@@ -1,0 +1,56 @@
+// =================================== Responsive Grid =================================== //
+
+// Grid Settings
+$bc-grid-columns: 12 !default;
+
+// Generates columns for the grid.
+//
+// @mixin bc-grid-columns
+//
+// @param {String} $breakpoint - the breakpoint size to attach to the column.
+//
+@mixin bc-grid-columns ($breakpoint) {
+  @for $i from 1 through $bc-grid-columns {
+    $_bc-column-width: percentage($i / $bc-grid-columns);
+
+    .bc-g-#{$breakpoint}-#{$i} {
+      flex: 0 0 $_bc-column-width;
+      max-width: $_bc-column-width;
+    }
+  }
+}
+
+.bc-g-row {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.bc-g-col {
+  flex: 1 1 0px;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+}
+
+@include bc-grid-columns('s');
+
+@mixin bc-responsive-medium() {
+    @media only screen and (max-width: 1000px) and (min-width: 768px) {
+      @content;
+    }
+}
+
+@mixin bc-responsive-large() {
+    @media only screen and (min-width: 1001px) {
+      @content;
+    }
+}
+
+@include bc-responsive-medium() {
+    @include bc-grid-columns('m');
+}
+
+@include bc-responsive-large() {
+  @include bc-grid-columns('l');
+}

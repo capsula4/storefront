@@ -1,0 +1,22 @@
+.bc-input {
+    @include text-body();
+    padding: 10px;
+}
+
+.bc-field {
+  display: flex;
+  flex-direction: column;
+
+  .bc-label {
+    margin-bottom: 2px;
+  }
+
+  + .bc-field {
+    margin-top: 20px;
+  }
+}
+
+.bc-disabled {
+    pointer-events: none;
+    filter: grayscale(100%);
+}

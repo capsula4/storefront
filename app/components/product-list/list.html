@@ -1,0 +1,16 @@
+<section class="bc-loading" ng-if="$ctrl.loading || $ctrl.error">
+  <div ng-if="$ctrl.loading">
+    <div class="bc-loader"></div>
+    <div class="bc-mtm">Loading&hellip;</div>
+  </div>
+  <div ng-if="$ctrl.error">Ooops, something went wrong: {{$ctrl.error}}</div>
+</section>
+
+<section ng-if="!($ctrl.loading || $ctrl.error)">
+  <div class="bc-g-row">
+    <bc-product-list-item ng-repeat="item in $ctrl.items"
+      class="bc-g-col bc-g-s-12 bc-g-m-6 bc-g-l-4"
+      product="item">
+    </bc-product-list-item>
+  </div>
+</section>

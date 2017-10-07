@@ -1,20 +1,24 @@
 import 'jquery';
 import angular from 'angular';
 import 'angular-resource';
+import 'angular-modal-service';
 import 'angular-ui-router';
 import 'angular-sanitize';
+import 'styles/styles.scss';
 
 import 'services/services';
-import 'directives/directives';
 
-import mainRoutes from 'components/main/main.routes';
+import headerComponent from 'components/header/header';
+import productListItem from 'components/product-list/item/item';
+import mainRoutes from 'routes';
 
-angular.module('BigCommerce', [
+angular.module('BigCommerceTest', [
     'ngResource',
     'ui.router',
     'services',
-    'directives',
-    'ngSanitize'
+    'ngSanitize',
+    'angularModalService'
 ])
-
+.component('bcHeader', headerComponent)
+.component('bcProductListItem', productListItem)
 .config(mainRoutes);

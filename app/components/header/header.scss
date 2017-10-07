@@ -1,0 +1,38 @@
+@import 'styles/styles.scss';
+
+header {
+  @include text-body();
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: $colour-box;
+  padding: 0 50px;
+}
+
+.header-container {
+  position: relative;
+  border-bottom: 1px solid $colour-keyframe;
+}
+
+.header-main {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+
+  &:hover {
+    transition: color 0.3s;
+    color: $colour-primary;
+  }
+
+  h1 {
+    @include text-heading();
+  }
+
+  img {
+    margin: 15px;
+    margin-left: 0;
+  }
+}

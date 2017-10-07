@@ -1,0 +1,48 @@
+@import 'styles/styles.scss';
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+body {
+    margin: 0;
+    background: $colour-background;
+    color: $colour-text;
+
+    @include text-body();
+}
+
+.bc-loading {
+    text-align: center;
+}
+
+$bc-loader-size: 20px;
+
+.bc-loader {
+  display: inline-block;
+  align-self: center;
+  width: $bc-loader-size;
+  height: $bc-loader-size;
+  border-radius: 50%;
+  border: 3px solid $colour-primary;
+  border-left-color: transparent;
+  animation: bc-rotate 0.8s ease-in-out infinite;
+}
+
+@keyframes bc-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+section {
+    padding: 50px;
+
+    .image-container {
+        display: inline-block;
+        margin-right: 50px;
+    }
+
+    .text-container {
+        display: inline-block;
+        vertical-align: bottom;
+    }
+}

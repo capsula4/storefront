@@ -1,3 +1,6 @@
 import angular from 'angular';
 
-angular.module('services', []);
+import resource from './resource';
+
+angular.module('services', [])
+    .service('bcProductsResource', resource);

@@ -1,0 +1,29 @@
+.bc-button {
+  @include text-body();
+  
+  display: inline-block;
+  background-color: $colour-primary;
+  color: $colour-text-flip;
+  border: 0;
+  padding: 10px 30px;
+  font-weight: bold;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $colour-primary-active;
+  }
+
+  + .bc-button {
+    margin-left: 10px;
+  }
+
+  &.bc-button--text {
+    background: transparent;
+    color: $colour-text;
+
+    &:hover {
+      background-color: transparent;
+      text-decoration: underline;
+    }
+  }
+}

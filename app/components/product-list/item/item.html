@@ -1,12 +1,12 @@
-<div class="bc-product" ng-click="$ctrl.go()">
-  <div class="bc-product__image"
+<div class="bc-product-item" ng-click="$ctrl.go()">
+  <div class="bc-product-item__image"
     style="background-image: url(images/{{$ctrl.product.image}})">
   </div>
-  <div class="bc-product__content">
+  <div class="bc-product-item__content">
     <div>
-      <div class="bc-product__detail">{{ $ctrl.product.brand }}</div>
+      <div class="bc-product-item__detail">{{ $ctrl.product.brand }}</div>
       <h2>{{ $ctrl.product.title }}</h2>
-      <div class="bc-product__detail">{{ $ctrl.product.price | currency:'$':2 }}</div>
+      <div class="bc-product-item__detail">{{ $ctrl.product.price | currency:'$':2 }}</div>
     </div>
   </div>
 </div>

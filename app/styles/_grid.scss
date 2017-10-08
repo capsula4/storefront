@@ -1,5 +1,10 @@
 // =================================== Responsive Grid =================================== //
 
+.bc-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 // Grid Settings
 $bc-grid-columns: 12 !default;
 

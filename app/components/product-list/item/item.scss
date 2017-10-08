@@ -1,27 +1,24 @@
 @import 'styles/styles.scss';
 
-.bc-product {
+$product-image-height: 200px;
+
+.bc-product-item {
     cursor: pointer;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    background: $colour-box;
     margin: 20px;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
-    border: 3px solid transparent;
     transition: border 0.3s 0s ease-out;
 
     &:hover {
-      border-color: $colour-primary;
-
-      .bc-product__image {
+      .bc-product-item__image {
         background-size: 110%;
-        opacity: 0.9;
+        opacity: 0.8;
       }
     }
 }
 
-.bc-product__content {
+.bc-product-item__content {
     text-align: center;
     padding: 15px;
     display: flex;
@@ -34,16 +31,16 @@
         text-transform: uppercase;
     }
 
-    .bc-product__detail {
+    .bc-product-item__detail {
         color: $colour-supplementary;
         margin: 0;
     }
 }
 
-.bc-product__image {
+.bc-product-item__image {
     background-color: $colour-background;
     transition: all 0.3s 0s ease-out;
-    height: 250px;
+    height: $product-image-height;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;

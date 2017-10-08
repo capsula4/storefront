@@ -1,60 +1,37 @@
 @import 'styles/styles.scss';
 
-.bc-product-box {
-    background-color: $colour-box;
-    padding: 20px;
-
-    @include bc-responsive-large() {
-      padding: 40px;
-    }
+.bc-product {
+    margin: 30px auto;
 }
 
-.bc-product-wrap {
-    margin: -40px auto 40px;
-    max-width: 1000px;
+.bc-product__brand {
+    color: $colour-supplementary;
+}
 
-    h1 {
-      font-size: 30px;
-      margin: 0 0 10px;
-    }
+.bc-product__price {
+    color: $colour-supplementary;
+    font-size: 20px;
+}
+
+.bc-product__description {
+    color: $colour-supplementary;
+    margin: 20px 0;
+}
+
+.bc-product__content {
+    text-align: center;
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-grow: 1;
 
     h2 {
-      font-size: 18px;
-      margin: 0;
+        font-size: 30px;
     }
 }
 
-.bc-product-actions {
-    color: $colour-supplementary;
-    font-size: 25px;
-
-    .bc-product-icon {
-        cursor: pointer;
-        margin-left: 10px;
-        opacity: 0.8;
-
-        &:hover {
-            opacity: 1;
-        }
-    }
-
-    .bc-product-icon--active {
-        color: $colour-primary;
-    }
-}
-
-.bc-product-main__image {
+.bc-product__image {
     width: 100%;
-    height: 250px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100%;
-
-    @include bc-responsive-medium() {
-        height: 300px;
-    }
-
-    @include bc-responsive-large() {
-        height: 400px;
-    }
+    height: auto;
 }

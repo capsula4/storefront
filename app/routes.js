@@ -1,6 +1,6 @@
 import productListCtrl from 'components/product-list/list.controller';
 import productViewCtrl from 'components/product/view.controller';
-import checkoutCtrl from 'components/cart/checkout.controller';
+import cartCtrl from 'components/cart/cart.controller';
 
 export default /*@ngInject*/ function($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
@@ -24,12 +24,12 @@ export default /*@ngInject*/ function($stateProvider, $urlRouterProvider) {
                 controllerAs: '$ctrl'
             }
         }
-    }).state('checkout', {
-        url: '/checkout',
+    }).state('cart', {
+        url: '/cart',
         views: {
             '@': {
-                templateUrl: '/components/cart/checkout.html',
-                controller: checkoutCtrl,
+                templateUrl: '/components/cart/cart.html',
+                controller: cartCtrl,
                 controllerAs: '$ctrl'
             }
         }

@@ -18,6 +18,10 @@ export default class Cart {
         return this.items;
     }
 
+    removeItem(product) {
+        delete this.items[product.title];
+    }
+
     getTotalQuantity() {
         let total = 0;
 

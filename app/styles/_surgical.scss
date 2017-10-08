@@ -19,6 +19,10 @@ $spacing_values: (n 0) (s 5px) (m 10px) (l 20px) (xl 40px);
 }
 
 .bc-space-between {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bc-right {
+    text-align: right;
 }

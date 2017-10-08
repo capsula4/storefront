@@ -1,5 +1,4 @@
-import forIn from 'lodash';
-import values from 'lodash';
+import forIn from 'lodash/forIn';
 
 export default class Cart {
     constructor() {
@@ -9,16 +8,27 @@ export default class Cart {
     addItem(product, quantity) {
         if (!this.items.hasOwnProperty(product.title)) {
             this.items[product.title] = product;
+            this.items[product.title].quantity = 0;
         }
 
         this.items[product.title].quantity += quantity;
     }
 
     getItems() {
-        return values(this.items);
+        return this.items;
     }
 
-    getTotal() {
+    getTotalQuantity() {
+        let total = 0;
+
+        forIn(this.items, item => {
+            total += item.quantity;
+        });
+
+        return total;
+    }
+
+    getTotalPrice() {
         let total = 0;
 
         forIn(this.items, item => {

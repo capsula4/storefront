@@ -6,5 +6,12 @@ export default /*@ngInject*/ function(ModalService, $state, bcCartService) {
         $state.go('list');
     };
 
-    this.cart = bcCartService;
+    /**
+     * Get total quantity of items in cart.
+     *
+     * @return {Number}
+     */
+    this.getTotal = () => {
+        return bcCartService.getTotalQuantity();
+    };
 }

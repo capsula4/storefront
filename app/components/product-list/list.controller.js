@@ -1,3 +1,5 @@
+import './list.scss';
+
 export default /*@ngInject*/ function(bcProductsResource) {
     this.loading = true;
 

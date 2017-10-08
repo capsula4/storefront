@@ -1,0 +1,12 @@
+<div class="bc-product-main__image"
+  style="background-image: url(images/{{$ctrl.product.image}})">
+</div>
+<div class="bc-product-wrap">
+  <div class="bc-product-box">
+    <div>
+      <div class="bc-product__detail">{{ $ctrl.product.brand }}</div>
+      <h2>{{ $ctrl.product.title }}</h2>
+      <div class="bc-product__detail">{{ $ctrl.product.price | currency:'$':2 }}</div>
+    </div>
+  </div>
+</div>

@@ -1,6 +1,10 @@
-<div class="bc-product-item" ng-click="$ctrl.go()">
+<div class="bc-product-item">
   <div class="bc-product-item__image"
     style="background-image: url(images/{{$ctrl.product.image}})">
+    <div class="bc-product-item__actions">
+        <a ng-click="$ctrl.go()" class="bc-button">View Details</a>
+        <a ng-click="$ctrl.add()" class="bc-button bc-button--secondary">Add to Cart</a>
+    </div>
   </div>
   <div class="bc-product-item__content">
     <div>

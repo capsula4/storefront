@@ -1,6 +1,9 @@
+$lighten-percentage: 10%;
+
 .bc-button {
   @include text-body();
-  
+
+  transition: background-color 0.3s 0s ease-out;
   display: inline-block;
   background-color: $colour-primary;
   color: $colour-text-flip;
@@ -10,7 +13,7 @@
   cursor: pointer;
 
   &:hover {
-    background-color: $colour-primary-active;
+    background-color: lighten($colour-primary, $lighten-percentage);
   }
 
   + .bc-button {
@@ -24,6 +27,14 @@
     &:hover {
       background-color: transparent;
       text-decoration: underline;
+    }
+  }
+
+  &.bc-button--secondary {
+    background-color: $colour-supplementary;
+
+    &:hover {
+      background-color: lighten($colour-supplementary, $lighten-percentage);
     }
   }
 }

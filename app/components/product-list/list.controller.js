@@ -8,7 +8,7 @@ export default /*@ngInject*/ function(bcProductsResource) {
             .then(response => {
                 this.items = response.data;
             }, () => {
-                this.error = 'Something went wrong';
+                this.error = 'Failed to retrieve products.';
             }).finally(() => {
                 this.loading = false;
             });

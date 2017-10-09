@@ -1,7 +1,14 @@
+@import 'styles/styles.scss';
+
 .bc-nav-item {
     text-transform: uppercase;
     text-decoration: none;
     font-weight: bold;
+    padding-bottom: 2px;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 .bc-highlight {

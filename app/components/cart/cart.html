@@ -21,7 +21,10 @@
                 </div>
             </td>
             <td class="bc-right">
-                {{ item.quantity }}
+                <bc-product-cart product="item"
+                    button="false"
+                    control="true">
+                </bc-product-cart>
             </td>
             <td class="bc-right">
                 {{ item.quantity * item.price | currency:'$':2  }}

@@ -1,35 +1,36 @@
 import './cart.scss';
 
 export default /*@ngInject*/ function(bcCartService) {
-    if (this.button) {
-        this.quantity = 1;
-    }
+    this.quantity = this.button ? 1 : this.product.quantity;
 
     this.increase = () => {
-        this.quantity += 1;
-
         if (!this.button) {
-            this.addToCart();
+            bcCartService.addItem(this.product, 1);
+            return;
         }
+
+        this.quantity += 1;
+    };
+
+    this.getQuantity = () => {
+        return bcCartService.getItem(this.product).quantity;
     };
 
     this.decrease = () => {
+        if (!this.button) {
+            bcCartService.addItem(this.product, -1);
+            return;
+        }
+
         if (this.quantity <= 0) {
             return;
         }
 
         this.quantity -= 1;
-
-        if (!this.button) {
-            this.addToCart();
-        }
     };
 
     this.addToCart = () => {
         bcCartService.addItem(this.product, this.quantity);
-
-        if (this.button) {
-            this.quantity = 1;
-        }
+        this.quantity = 1;
     };
 }

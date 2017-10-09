@@ -12,6 +12,10 @@ export default class Cart {
         }
 
         this.items[product.title].quantity += quantity;
+
+        if (this.items[product.title].quantity < 1) {
+            this.items[product.title].quantity = 0;
+        }
     }
 
     getItems() {
@@ -20,6 +24,10 @@ export default class Cart {
 
     removeItem(product) {
         delete this.items[product.title];
+    }
+
+    getItem(product) {
+        return this.items[product.title];
     }
 
     getTotalQuantity() {

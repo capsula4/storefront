@@ -20,6 +20,10 @@
         border-bottom: 1px solid $colour-keyframe;
         padding: 20px 0;
     }
+
+    .bc-product-cart {
+        justify-content: flex-end;
+    }
 }
 
 .bc-cart__item {

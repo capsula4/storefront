@@ -5,7 +5,11 @@
     </a>
 
     <div>
-      <a href="/#/cart" class="bc-nav-item">My Cart ({{ $ctrl.getTotal() }})</a>
+      <a href="/#/cart"
+        class="bc-nav-item"
+        ng-class="{'bc-highlight': $ctrl.highlight}">
+          My Cart ({{ $ctrl.getTotal() }})
+      </a>
     </div>
   </header>
 </div>

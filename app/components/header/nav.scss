@@ -3,3 +3,16 @@
     text-decoration: none;
     font-weight: bold;
 }
+
+.bc-highlight {
+    animation: highlight 0.5s;
+}
+
+@keyframes highlight {
+  0% {
+    background: yellow;
+  }
+  100% {
+    background: transparent;
+  }
+}

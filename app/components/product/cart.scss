@@ -1,0 +1,40 @@
+@import 'styles/styles.scss';
+
+.bc-product-cart {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+
+    .bc-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.bc-product-cart__quantity {
+    background: $colour-keyframe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+}
+
+.bc-product-cart__control {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1px;
+
+    a {
+        font-weight: bold;
+        background-color: $colour-supplementary;
+        color: $colour-text-flip !important;
+        text-decoration: none;
+        padding: 2px 10px;
+        margin: 0 !important;
+    }
+
+    a + a {
+        margin-top: 1px !important;
+    }
+}

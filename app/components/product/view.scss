@@ -1,5 +1,7 @@
 @import 'styles/styles.scss';
 
+$product-description-spacing: 30px;
+
 .bc-product {
     margin: 30px auto;
 }
@@ -15,7 +17,9 @@
 
 .bc-product__description {
     color: $colour-supplementary;
-    margin: 20px 0;
+    margin: $product-description-spacing 0;
+    border-bottom: 1px solid $colour-keyframe;
+    padding-bottom: $product-description-spacing;
 }
 
 .bc-product__content {

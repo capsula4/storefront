@@ -1,0 +1,24 @@
+<div class="bc-product-cart">
+    <div ng-if="$ctrl.control" class="bc-space-between bc-mrl">
+        <div class="bc-product-cart__quantity">
+            {{ $ctrl.quantity }}
+        </div>
+        <div class="bc-product-cart__control">
+            <a class="bc-button bc-button--secondary"
+                ng-click="$ctrl.increase()"
+                href="javascript:void(0)">
+                +
+            </a>
+            <a class="bc-button bc-button--secondary"
+                ng-click="$ctrl.decrease()"
+                href="javascript:void(0)">
+                -
+            </a>
+        </div>
+    </div>
+    <a ng-click="$ctrl.addToCart()"
+        ng-if="$ctrl.button"
+        class="bc-button">
+        Add to Cart
+    </a>
+</div>

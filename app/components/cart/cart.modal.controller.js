@@ -5,6 +5,8 @@ export default /*@ngInject*/ function(close, $element, $timeout, $document) {
         event.originalEvent.cartClicked = true;
     });
 
+    // We need a timeout otherwise as soon as we click on "My Cart"
+    // button it generates a document click and would hide it straight away.
     $timeout(() => {
         $document.on('click', (event) => {
             if (event.originalEvent.cartClicked) {

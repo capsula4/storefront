@@ -16,7 +16,7 @@
                         <div>{{ item.brand }}</div>
                         <h3>{{ item.title }}
                             <span ng-show="$ctrl.summary">
-                                x {{ item.quantity }}
+                                &times; {{ item.quantity }}
                             </span>
                         </h3>
                     </div>
@@ -32,7 +32,9 @@
                 {{ item.quantity * item.price | currency:'$':2  }}
             </td>
             <td class="bc-right">
-                <a class="bc-button bc-button--text" ng-click="$ctrl.cart.removeItem(item)">x</a>
+                <a class="bc-button bc-button--text" ng-click="$ctrl.cart.removeItem(item)">
+                    &times;
+                </a>
             </td>
         </tr>
         <tr ng-if="!$ctrl.cart.getTotalQuantity()">

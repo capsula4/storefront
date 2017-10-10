@@ -21,5 +21,5 @@ Angular was chosen first because of my familiarity/knowledge of the framework, b
 If I had given more time to invest in the project, I would have:
  - Implement more smooth animations (like ngAnimate), mainly when transitioning between different "pages".
  - Better looking design (closer to the screenshots, although I understand that's not a requirement for me).
- - Unit test everything, including template unit tests.
+ - Unit test everything, including template unit tests. Unit test components with dependencies properly mocking dependencies.
  - Functional tests (E2E) using Protractor. Checking the whole application works as one, testing navigation and overall functionality.

@@ -15,7 +15,7 @@ Angular was chosen first because of my familiarity/knowledge of the framework, b
  - Run `gulp serve` and access `http://127.0.0.1:9001/`
 
 ## Running Unit Tests
- - Run `gulp build` and then `gulp karma`
+ - Run `gulp karma`
 
 ## Notes
 If I had given more time to invest in the project, I would have:
@@ -23,4 +23,3 @@ If I had given more time to invest in the project, I would have:
  - Better looking design (closer to the screenshots, although I understand that's not a requirement for me).
  - Unit test everything, including template unit tests.
  - Functional tests (E2E) using Protractor. Checking the whole application works as one, testing navigation and overall functionality.
- 

@@ -1,3 +1,6 @@
+
+![](https://pasteboard.co/GOio4wD.png)
+
 The foundations of this solution were created using https://www.npmjs.com/package/generator-angular-es6-webpack, which creates all the base files for an Angular 1.5 app, with ES6, SCSS support.
 
 Angular was chosen first because of my familiarity/knowledge of the framework, but also because:

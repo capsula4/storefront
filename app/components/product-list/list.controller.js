@@ -3,6 +3,9 @@ import './list.scss';
 export default /*@ngInject*/ function(bcProductsResource) {
     this.loading = true;
 
+    /**
+     * Inits list of available items.
+     */
     this.init = () => {
         bcProductsResource.query()
             .then(response => {
@@ -14,5 +17,6 @@ export default /*@ngInject*/ function(bcProductsResource) {
             });
     };
 
+    // use timeout to simulate loading effect from API.
     setTimeout(this.init, 1000);
 }

@@ -11,7 +11,7 @@ export default /*@ngInject*/ function(ModalService, $state, $timeout, bcCartServ
     };
 
     /**
-     * Displays the cart component.
+     * Displays the cart popup.
      */
     this.showCart = () => {
         if (modal) {
@@ -41,11 +41,13 @@ export default /*@ngInject*/ function(ModalService, $state, $timeout, bcCartServ
 
     /**
      * Get total quantity of items in cart.
+     * If the quantity has changed, it will highlight it.
      *
      * @return {Number}
      */
     this.getTotal = () => {
         if (this.quantity !== bcCartService.getTotalQuantity()) {
+            // Avoid highlighting on initialising.
             if (typeof this.quantity !== 'undefined') {
                 this.highlightCart();
             }

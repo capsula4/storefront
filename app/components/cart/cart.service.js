@@ -14,7 +14,7 @@ export default class Cart {
         this.items[product.title].quantity += quantity;
 
         if (this.items[product.title].quantity < 1) {
-            this.items[product.title].quantity = 0;
+            this.removeItem(product);
         }
     }
 
@@ -27,6 +27,14 @@ export default class Cart {
     }
 
     getItem(product) {
+        if (!product || !product.title) {
+            return null;
+        }
+
+        if (!this.items.hasOwnProperty(product.title)) {
+            return null;
+        }
+
         return this.items[product.title];
     }
 

@@ -5,7 +5,8 @@
     </a>
 
     <div>
-      <a href="/#/cart"
+      <a href="javascript:void(0)"
+        ng-click="$ctrl.showCart()"
         class="bc-nav-item"
         ng-class="{'bc-highlight': $ctrl.highlight}">
           My Cart ({{ $ctrl.getTotal() }})

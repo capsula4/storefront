@@ -5,6 +5,7 @@ $lighten-percentage: 10%;
 
   transition: background-color 0.3s 0s ease-out;
   display: inline-block;
+  text-decoration: none;
   background-color: $colour-primary;
   color: $colour-text-flip;
   border: 0;

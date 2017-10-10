@@ -33,5 +33,17 @@
     .bc-cart__item-image {
         width: 100px;
         margin-right: 20px;
+        align-self: flex-start;
+    }
+}
+
+.bc-modal {
+    .bc-cart {
+        font-size: 15px;
+
+        h3 {
+            font-size: 16px;
+            margin: 5px 0;
+        }
     }
 }

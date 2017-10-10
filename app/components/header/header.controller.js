@@ -1,9 +1,31 @@
+import cartController from '../cart/cart.modal.controller';
+
 export default /*@ngInject*/ function(ModalService, $state, $timeout, bcCartService) {
+    let modal;
+
     /**
      * Loads the homepage.
      */
     this.loadHomepage = () => {
         $state.go('list');
+    };
+
+    /**
+     * Displays the cart component.
+     */
+    this.showCart = () => {
+        if (modal) {
+            modal.scope.close();
+            return;
+        }
+
+        modal = ModalService.showModal({
+            templateUrl: 'components/cart/cart.modal.html',
+            controllerAs: '$ctrl',
+            controller: cartController
+        }).then(m => {
+            m.close.then(() => { modal = null; });
+        });
     };
 
     /**

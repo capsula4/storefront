@@ -15,7 +15,6 @@ export default /*@ngInject*/ function(ModalService, $state, $timeout, bcCartServ
      */
     this.showCart = () => {
         if (modal) {
-            modal.scope.close();
             return;
         }
 

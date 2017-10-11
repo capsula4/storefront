@@ -13,8 +13,8 @@ import controller from './cart.controller';
 const ProductCartComponent = {
     bindings: {
         product: '=',
-        control: '?=',
-        button: '?='
+        control: '=?',
+        button: '=?'
     },
     controller,
     templateUrl: '/components/product/cart.html'

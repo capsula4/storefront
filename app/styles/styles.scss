@@ -1,3 +1,4 @@
+@import "./animation";
 @import "./colour";
 @import "./text";
 @import "./surgical";
@@ -7,3 +8,11 @@
 @import "./headers";
 @import "./modal";
 @import "./inputs";
+
+.bc-body {
+    margin: 0;
+    background: $colour-background;
+    color: $colour-text;
+
+    @include text-body();
+}

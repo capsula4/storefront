@@ -22,9 +22,5 @@ Angular was chosen first because of my familiarity/knowledge of the framework, b
 
 ## Notes
 If I had given more time to invest in the project, I would have:
- - Implement more smooth animations (like ngAnimate), mainly when transitioning between different "pages".
- - Better looking design (closer to the screenshots, although I understand that's not a requirement for me).
- - Unit test everything, including template unit tests. Unit test components with dependencies properly mocking dependencies.
+ - Unit test everything, including template unit tests.
  - Functional tests (E2E) using Protractor. Checking the whole application works as one, testing navigation and overall functionality.
- - I'm not 100% happy how I have implemented the cart indexing items by title, definitely having an ID would be better!
- - Did I mention more tests? :) Seriously, for production they are a complete must!

@@ -9,7 +9,7 @@ import controller from './cart.controller';
  */
 const CartComponent = {
     bindings: {
-        summary: '='
+        summary: '=?'
     },
     controller,
     templateUrl: '/components/cart/cart.html'

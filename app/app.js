@@ -4,6 +4,7 @@ import 'angular-resource';
 import 'angular-modal-service';
 import 'angular-ui-router';
 import 'angular-sanitize';
+import 'angular-animate';
 import 'styles/styles.scss';
 
 import mainRoutes from 'routes';
@@ -18,6 +19,7 @@ angular.module('BigCommerceTest', [
     'ngResource',
     'ui.router',
     'ngSanitize',
+    'ngAnimate',
     'angularModalService'
 ])
 .service('bcProductsResource', productsResource)

@@ -6,7 +6,7 @@
   <div ng-if="$ctrl.error">Ooops, something went wrong: {{$ctrl.error}}</div>
 </section>
 
-<section ng-if="!($ctrl.loading || $ctrl.error)">
+<section ng-if="!($ctrl.loading || $ctrl.error)" class="fade">
   <div class="bc-g-row">
     <bc-product-list-item ng-repeat="item in $ctrl.items"
       class="bc-g-col bc-g-s-12 bc-g-m-6 bc-g-l-4"

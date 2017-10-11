@@ -1,5 +1,6 @@
 import './item.scss';
 import controller from './item.controller';
+import templateUrl from './item.html';
 
 /**
  * Component for displaying a single product.
@@ -9,7 +10,7 @@ const ProductItemComponent = {
         product: '='
     },
     controller,
-    templateUrl: '/components/product-list/item/item.html'
+    templateUrl
 };
 
 export default ProductItemComponent;

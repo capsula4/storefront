@@ -1,5 +1,5 @@
 <div class="bc-product-cart">
-    <div ng-if="$ctrl.control" class="bc-space-between">
+    <div class="bc-product-cart__qty-control bc-space-between">
         <div class="bc-product-cart__quantity">
             {{ $ctrl.getQuantity() }}
         </div>
@@ -18,7 +18,7 @@
     </div>
     <a ng-click="$ctrl.addToCart()"
         ng-if="$ctrl.button"
-        class="bc-button bc-mll">
+        class="bc-button bc-mll bc-button__cart">
         Add to Cart
     </a>
 </div>

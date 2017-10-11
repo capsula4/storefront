@@ -22,8 +22,8 @@ module.exports = {
                 exclude: /node_modules/
             },
             {
-                test: /.html$/,
-                loader: 'ngtemplate?relativeTo=' + __dirname +'/app!html?root=' + __dirname + '/app'
+                test: /\.html$/,
+                loader: 'ngtemplate!html'
             },
             {
                 test: /\.scss$/,

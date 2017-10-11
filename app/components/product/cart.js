@@ -1,5 +1,6 @@
 import './cart.scss';
 import controller from './cart.controller';
+import templateUrl from './cart.html';
 
 /**
  * Component for displaying a cart component for a single product.
@@ -13,11 +14,10 @@ import controller from './cart.controller';
 const ProductCartComponent = {
     bindings: {
         product: '=',
-        control: '=?',
         button: '=?'
     },
     controller,
-    templateUrl: '/components/product/cart.html'
+    templateUrl
 };
 
 export default ProductCartComponent;

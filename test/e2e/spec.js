@@ -3,8 +3,8 @@ const helper = require('./common');
 const LIST = {
     list: by.css('.po-list'),
     items: by.css('.po-list-item'),
-    add: by.css('.bc-product-item__actions .po-view'),
-    view: by.css('.bc-product-item__actions .po-add')
+    add: by.css('.bc-product-item__actions .po-add'),
+    view: by.css('.bc-product-item__actions .po-view')
 };
 
 const PRODUCT = {

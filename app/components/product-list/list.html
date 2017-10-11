@@ -7,9 +7,9 @@
 </section>
 
 <section ng-if="!($ctrl.loading || $ctrl.error)" class="fade">
-  <div class="bc-g-row">
+  <div class="bc-g-row po-list">
     <bc-product-list-item ng-repeat="item in $ctrl.items"
-      class="bc-g-col bc-g-s-12 bc-g-m-6 bc-g-l-4"
+      class="bc-g-col bc-g-s-12 bc-g-m-6 bc-g-l-4 po-list-item"
       product="item">
     </bc-product-list-item>
   </div>

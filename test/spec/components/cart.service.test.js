@@ -53,6 +53,33 @@ describe('Cart Service', () => {
         });
     });
 
+    describe('when adding a corrupted item', () => {
+        const product = {foo: 'x', bar: 2};
+
+        beforeEach(inject(($injector) => {
+            cartService = $injector.get('bcCartService');
+            cartService.addItem(null, 5);
+            cartService.addItem({}, 5);
+            cartService.addItem(product, 5);
+        }));
+
+        it('should return no items', () => {
+            expect(cartService.getItems()).toEqual({});
+        });
+
+        it('should return 0 as total quantity', () => {
+            expect(cartService.getTotalQuantity()).toEqual(0);
+        });
+
+        it('should return 0 as total price', () => {
+            expect(cartService.getTotalPrice()).toEqual(0);
+        });
+
+        it('should return null fetching that item', () => {
+            expect(cartService.getItem(product)).toEqual(null);
+        });
+    });
+
     describe('when adding many items', () => {
         const product = {title: 'x', price: 2};
         const product2 = {title: 'a', price: 3};

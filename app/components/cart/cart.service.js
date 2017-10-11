@@ -18,16 +18,50 @@ export default class Cart {
      * @param {Number} quantity
      */
     addItem(product, quantity) {
-        if (!this.items.hasOwnProperty(product.title)) {
-            this.items[product.title] = product;
-            this.items[product.title].quantity = 0;
+        const index = this._getIndex(product);
+
+        if (!index) {
+            return;
         }
 
-        this.items[product.title].quantity += quantity;
+        if (!this._hasProduct(product)) {
+            this.items[index] = product;
+            this.items[index].quantity = 0;
+        }
 
-        if (this.items[product.title].quantity < 1) {
+        this.items[index].quantity += quantity;
+
+        if (this.items[index].quantity < 1) {
             this.removeItem(product);
         }
+    }
+
+    /**
+     * Checks whether the given product is in the cart.
+     *
+     * @param  {Object} product
+     * @return {Boolean}
+     */
+    _hasProduct(product) {
+        const index = this._getIndex(product);
+
+        if (index && this.items.hasOwnProperty(index)) {
+            return true;
+        }
+
+        return false;
+    }
+
+    /**
+     * Gets the index provided a product.
+     *
+     * @param  {Object} product
+     * @return {String}
+     */
+    _getIndex(product) {
+        const index = product ? product.title : '';
+
+        return index;
     }
 
     /**
@@ -45,7 +79,11 @@ export default class Cart {
      * @param  {Object} product
      */
     removeItem(product) {
-        delete this.items[product.title];
+        const index = this._getIndex(product);
+
+        if (index) {
+            delete this.items[index];
+        }
     }
 
     /**
@@ -55,15 +93,13 @@ export default class Cart {
      * @return {Object} cart item
      */
     getItem(product) {
-        if (!product || !product.title) {
+        if (!this._hasProduct(product)) {
             return null;
         }
 
-        if (!this.items.hasOwnProperty(product.title)) {
-            return null;
-        }
+        const index = this._getIndex(product);
 
-        return this.items[product.title];
+        return this.items[index];
     }
 
     /**

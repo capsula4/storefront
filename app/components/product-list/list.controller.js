@@ -18,5 +18,5 @@ export default /*@ngInject*/ function(bcProductsResource, $timeout) {
     };
 
     // use timeout to simulate loading effect from API.
-    this.init();
+    $timeout(this.init, 1000);
 }

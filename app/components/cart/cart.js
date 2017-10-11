@@ -1,5 +1,6 @@
 import './cart.scss';
 import controller from './cart.controller';
+import templateUrl from './cart.html';
 
 /**
  * Component for displaying the cart component.
@@ -12,7 +13,7 @@ const CartComponent = {
         summary: '=?'
     },
     controller,
-    templateUrl: '/components/cart/cart.html'
+    templateUrl
 };
 
 export default CartComponent;

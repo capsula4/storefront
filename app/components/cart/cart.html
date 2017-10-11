@@ -43,7 +43,7 @@
             </td>
         </tr>
     </tbody>
-    <tfoot>
+    <tfoot ng-if="$ctrl.cart.getTotalQuantity()">
         <tr>
             <td colspan="2" class="bc-right">Total</td>
             <td class="bc-right">{{$ctrl.cart.getTotalPrice() | currency:'$':2 }}</td>

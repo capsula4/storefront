@@ -11,6 +11,8 @@ var KarmaServer = require('karma').Server;
 var webpack = require("webpack");
 var WebpackDevServer = require("webpack-dev-server");
 var webpackConfig = require("./webpack.config.js");
+var runner = require('protractor-webpack');
+
 var minimist = require('minimist');
 
 var knownOptions = {
@@ -39,20 +41,31 @@ gulp.task("webpack-dev-server", function(callback) {
 	});
 });
 
+gulp.task('protractor', function(callback) {
+    var reqlib = require('app-root-path').require;
+    var launcher = reqlib('/node_modules/protractor/built/launcher');
+    var myConfig = Object.create(webpackConfig);
+    myConfig.devtool = "eval";
+    myConfig.debug = true;
+
+    new WebpackDevServer(webpack(myConfig), {
+        contentBase: 'app/',
+        stats: {
+            colors: true
+        }
+    }).listen(9001, "localhost", function(err) {
+        if(err) throw new gutil.PluginError("webpack-dev-server", err);
+        launcher.init(__dirname + '/test/protractor.conf.js');
+        gutil.log("[webpack-dev-server]", "http://127.0.0.1:9001");
+    });
+});
+
 gulp.task('karma', function(done) {
   var server = new KarmaServer({
 	  configFile: __dirname + '/test/karma.conf.js',
 	  singleRun: false
   }, done);
   server.start();
-});
-
-gulp.task('karma:ci', function(done) {
-	var server = new KarmaServer({
-  	  configFile: __dirname + '/test/karma.ci.conf.js',
-  	  singleRun: true
-    }, done);
-    server.start();
 });
 
 gulp.task("clean", function() {

@@ -1,6 +1,4 @@
 
-![](https://pasteboard.co/GOio4wD.png)
-
 The foundations of this solution were created using https://www.npmjs.com/package/generator-angular-es6-webpack, which creates all the base files for an Angular 1.5 app, with ES6, SCSS support.
 
 Angular was chosen first because of my familiarity/knowledge of the framework, but also because:
@@ -28,4 +26,5 @@ Angular was chosen first because of my familiarity/knowledge of the framework, b
 ## Notes
 If I had given more time to invest in the project, I would have:
  - Unit test everything. I only included one unit test for each kind of angular concept (controller, service, component).
- - Functional tests (E2E) using Protractor (Selenium for AngularJS). Checking the whole application works, testing navigation and overall functionality.
+ - More functional tests (E2E) using Protractor (Selenium for AngularJS). Would have added more assertions and tests for the cart page.
+ - Although I tried to organize my CSS, it could be improved, e.g. put all animations inside `_animation.scss`

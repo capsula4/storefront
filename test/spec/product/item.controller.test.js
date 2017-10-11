@@ -1,3 +1,5 @@
+// Test for an angular controller, spying on dependencies (could have also mocked).
+
 import itemCtrl from 'components/product-list/item/item.controller';
 
 describe('Product Item controller', () => {

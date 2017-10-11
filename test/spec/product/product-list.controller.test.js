@@ -1,3 +1,5 @@
+// Test for an angular controller, mocking API calls.
+
 import listCtrl from 'components/product-list/list.controller';
 
 describe('Product List controller', () => {

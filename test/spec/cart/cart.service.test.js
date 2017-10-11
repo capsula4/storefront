@@ -1,3 +1,5 @@
+// Test for cart service, example of testing an angular service.
+// Tried to test all posible edge cases.
 describe('Cart Service', () => {
     let cartService;
 

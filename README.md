@@ -21,8 +21,9 @@ Angular was chosen first because of my familiarity/knowledge of the framework, b
  - Run `gulp karma`
 
 ## Running Protactor Test (Selenium)
+ - Run `./node_modules/webdriver-manager/bin/webdriver-manager update` to ensure you've got the latest version of the webdriver.
  - Run `./node_modules/webdriver-manager/bin/webdriver-manager start` to start the selenium server. Then on another terminal:
- - Run `gulp protractor` to run the actual tests.
+ - Run `gulp protractor` to run the actual tests. Remember that every time you open a new terminal you might need to run `nvm use 7`.
 
 ## Notes
 If I had given more time to invest in the project, I would have:

@@ -22,5 +22,5 @@ Angular was chosen first because of my familiarity/knowledge of the framework, b
 
 ## Notes
 If I had given more time to invest in the project, I would have:
- - Unit test everything, including template unit tests.
+ - Unit test everything. I only included one unit test for each kind of angular concept (controller, service, component).
  - Functional tests (E2E) using Protractor. Checking the whole application works as one, testing navigation and overall functionality.

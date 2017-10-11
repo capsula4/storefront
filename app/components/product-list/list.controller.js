@@ -1,6 +1,6 @@
 import './list.scss';
 
-export default /*@ngInject*/ function(bcProductsResource) {
+export default /*@ngInject*/ function(bcProductsResource, $timeout) {
     this.loading = true;
 
     /**
@@ -18,5 +18,5 @@ export default /*@ngInject*/ function(bcProductsResource) {
     };
 
     // use timeout to simulate loading effect from API.
-    setTimeout(this.init, 1000);
+    this.init();
 }

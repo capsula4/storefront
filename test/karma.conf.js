@@ -7,7 +7,7 @@ module.exports = function(config) {
     files: [
       './spec/tests.webpack.js'
     ],
-    frameworks: ['jasmine'],
+    frameworks: ['jasmine', 'sinon'],
     preprocessors: {
       './spec/tests.webpack.js': ['webpack', 'sourcemap'],
     },

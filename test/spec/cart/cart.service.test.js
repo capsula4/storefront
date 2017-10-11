@@ -5,7 +5,7 @@ describe('Cart Service', () => {
 
     beforeEach(angular.mock.module('BigCommerceTest'));
 
-    describe('when its newly created', () => {
+    describe('when it is newly created', () => {
         beforeEach(inject(($injector) => {
             cartService = $injector.get('bcCartService');
         }));
